@@ -13,6 +13,11 @@ function init_validation(target) {
 		return valid;
 	}
 	
+	$('form.w_validation').live('submit', function(e) {
+		var valid = validate(this);
+		if(!valid) e.preventDefault();
+	});
+	
 	if(target) {return validate(target);}
 }
 $(window).load(function() {
