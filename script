@@ -215,13 +215,7 @@ $(document).ready(function(){
 		}
 	);
 
-	$('.gallery-i a').live('click',function(){
-		var $href = $(this).attr('href');
-		$('.gallery-i').removeClass('active');
-		$(this).closest('.gallery-i').addClass('active');
-		$('.tab-gallery-big img').attr('src',$href);
-		return false;
-	});
+	
 	$('.content-tabs-head a').click(function(){
 		var $index = $(this).closest('li').index();
 		$('.content-tabs-head a').removeClass('active');
